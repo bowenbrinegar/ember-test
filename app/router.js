@@ -11,7 +11,6 @@ Router.map(function() {
     this.route('new');
     this.route('list');
   });
-  this.route('welcome');
   this.route('complete');
 });
 
