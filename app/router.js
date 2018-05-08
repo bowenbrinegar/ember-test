@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('tasks', function() {
     this.route('new');
+    this.route('list');
   });
   this.route('welcome');
   this.route('complete');
