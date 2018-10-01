@@ -6,7 +6,12 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     
   });
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css')
+  app.import('node_modules/bootstrap/dist/css/bootstrap.css')
+  
+
+  
+
+
 
   return app.toTree();
 };

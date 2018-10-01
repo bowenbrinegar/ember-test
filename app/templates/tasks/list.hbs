@@ -1,2 +1,29 @@
-<h1>Task List</h1>
-{{outlet}}
+
+<div class='row'>  
+    <button class='btn btn-danger' {{action 'viewToggle'}}>toggle</button>
+</div>
+
+<div id='taskList' class='row'>
+    {{#if turn}}
+        {{#each model as |task|}}
+        <div id='taskItem' class='card'>
+            <div id='taskInfo' class='card-body'>
+                {{#unless edit}}
+                <p><strong>Task:</strong> {{task.title}}</p>
+                <p><strong>Holder:</strong> {{task.holder}}</p>
+                <p><strong>Date Assigned:</strong> {{task.date}}</p>
+                {{else}}
+                <p><strong>Task:</strong> {{input value=task.title}}</p>
+                <p><strong>Holder:</strong> {{input value=task.holder}}</p>
+                <p><strong>Date Assigned:</strong></p>
+                {{/unless}}
+            </div>
+            <div id='buttonBox'>
+                <button {{action 'editToggle' task.id}}>Edit</button>
+                <button {{action 'delete' task.id}}>Delete</button>
+            </div>
+        </div>
+        {{/each}}
+    {{/if}}
+</div>
+

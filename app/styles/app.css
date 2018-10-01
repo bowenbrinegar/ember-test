@@ -1,0 +1,13 @@
+#contentContainer {
+    margin-top: 35px;
+}
+
+#taskList {
+    margin-top: 25px;
+}
+
+#taskItem {
+    display: flex;
+    margin: 5px;
+    width: 100%;
+}
